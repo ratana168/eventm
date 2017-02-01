@@ -14,7 +14,7 @@ if [ -d "$TGTDIR" ]; then
 	git checkout master
 	git pull
 else
-	git clone https://github.com/SreyPichh/eventm.git $TGTDIR
+	git clone https://github.com/ratana168/eventm.git $TGTDIR
 fi
 
 files=`find $TGTDIR/www -name "*.template"`
@@ -54,7 +54,7 @@ cp -r $HOME/.virtualenvs/eventm/lib/python2.7/site-packages/pytz $TGTDIR/buildww
 cp -r $HOME/.virtualenvs/eventm/lib/python2.7/site-packages/httplib2 $TGTDIR/buildwww/httplib2
 cp -r $HOME/.virtualenvs/eventm/lib/python2.7/site-packages/httpagentparser $TGTDIR/buildwww/httpagentparser
 cd $HOME/.eventm/google_appengine/
-./appcfg.py -A sport-cambodia -V uno update $TGTDIR/buildwww/ --no_cookies date
+./appcfg.py -A cambodia-sport -V uno update $TGTDIR/buildwww/ --no_cookies date
 # cd ..
 
 # appc update $TGTDIR/buildwww/app.yaml
